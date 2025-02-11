@@ -1,0 +1,32 @@
+body{
+    background: rgb(255, 254, 253);
+}
+.mapadiv{
+    width: 40%;
+    margin: auto;
+}
+.mapadiv path{
+    fill:#cd066f;
+    stroke: rgb(204, 241, 18);
+    stroke-width: 5px;
+}
+.mapadiv :hover{
+    fill: #800000;
+}
+
+.departamento-btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #e6dad3;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.departamento-btn:hover {
+    background-color: #aea7e6;
+}
+.highlight {
+    background-color: #eec319; /* Color de resaltado */
+}
