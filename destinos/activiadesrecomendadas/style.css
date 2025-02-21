@@ -1,0 +1,129 @@
+
+#fullscreen:fullscreen {
+    padding: 42px;
+    background-color: pink;
+    border: 2px solid rgba(37, 160, 18, 0.437);
+    font-size: 200%;
+  }
+  
+  #fullscreen:fullscreen > h1 {
+    color: rgb(162, 146, 146);
+  }
+  
+  #fullscreen:fullscreen > p {
+    color: rgb(139, 97, 97);
+  }
+  
+  #fullscreen:fullscreen > button {
+    display: none;
+  }
+  /* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+/* Sección de Actividades Recomendadas */
+#activities {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Título de la sección */
+#activities h1 {
+    font-size: 2.8rem;
+    color: #da1b17;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+#activities h1::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    background-color: #9eee86;
+    margin: 10px auto 0;
+    border-radius: 5px;
+}
+
+/* Contenedor de actividades */
+.activities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+/* Estilos de cada tarjeta de actividad */
+.activity {
+    background-color: #ffcece;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.activity:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    filter: brightness(1.1);
+}
+
+/* Estilo de las imágenes */
+.activity img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+    transition: opacity 0.3s ease;
+}
+
+.activity:hover img {
+    opacity: 0.8;
+}
+
+/* Títulos y descripciones */
+.activity h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin: 20px;
+    font-weight: 600;
+}
+
+.activity p {
+    font-size: 1rem;
+    color: #0c0b0b;
+    padding: 0 20px 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Efecto de hover en el texto */
+.activity:hover h3 {
+    color: #4b3a75;
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    #activities {
+        padding: 60px 20px;
+    }
+
+    .activities-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
