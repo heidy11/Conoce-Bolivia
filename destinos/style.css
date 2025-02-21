@@ -1,32 +1,95 @@
-body{
+/* Estilos base */
+body {
     background: rgb(255, 254, 253);
-}
-.mapadiv{
-    width: 40%;
-    margin: auto;
-}
-.mapadiv path{
-    fill:#cd066f;
-    stroke: rgb(204, 241, 18);
-    stroke-width: 5px;
-}
-.mapadiv :hover{
-    fill: #800000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 20px;
+    flex-direction: row;
+}
+
+.mapadiv {
+    width: 50%;
+    max-width: 500px;
+    flex-shrink: 0;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+#botones-departamentos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #f8f4f2;
+    border-radius: 12px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+    max-width: 250px;
+    flex-shrink: 0;
+}
+
+/* Estilo base para los botones */
 .departamento-btn {
-    padding: 10px 20px;
-    margin: 5px;
-    border: none;
     background-color: #e6dad3;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Estilo cuando un botón está resaltado */
+.departamento-btn.highlight {
+    background-color: #afa7ae; /* Amarillo */
+}
+
+
+/* Estilo cuando un path está resaltado */
+.mapadiv path.highlight {
+    fill: #800000 !important;
 }
 
 .departamento-btn:hover {
-    background-color: #aea7e6;
+    transform: scale(1.05);
 }
-.highlight {
-    background-color: #eec319; /* Color de resaltado */
+
+/* Colores al pasar el mouse */
+.departamento-btn.red:hover {
+    background-color: red;
+}
+
+.departamento-btn.yellow:hover {
+    background-color: yellow;
+}
+
+.departamento-btn.green:hover {
+    background-color: green;
+}
+
+/* Estilos para resaltar el mapa */
+.mapadiv path {
+    fill: #f7f7f7;
+    stroke: #5d358b;
+    stroke-width: 5px;
+    transition: fill 0.3s ease;
+}
+
+.mapadiv path.highlight {
+    fill: #800000 !important;
+}
+
+/* Colores específicos para el mapa */
+#BOL.highlight, #BOO.highlight, #BON.highlight {
+    fill: red !important; /* Rojo para La Paz, Oruro, Pando */
+}
+
+#BOP.highlight, #BOB.highlight, #BOC.highlight {
+    fill: yellow !important; /* Amarillo para Potosí, Beni, Cochabamba */
+}
+
+#BOS.highlight, #BOH.highlight, #BOT.highlight {
+    fill: green !important; /* Verde para Santa Cruz, Chuquisaca, Tarija */
 }

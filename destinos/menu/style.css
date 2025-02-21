@@ -1,0 +1,69 @@
+
+/* Estilo del body para centrar la caja */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Caja de navegación */
+.caja-navegacion {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Título */
+.caja-navegacion h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+/* Contenedor de botones */
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilos de los botones */
+.boton {
+    text-decoration: none;
+    padding: 12px;
+    font-size: 1.2rem;
+    color: white;
+    background: #3498db;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: block;
+    font-weight: bold;
+}
+
+/* Efecto hover */
+.boton:hover {
+    background: #2980b9;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .caja-navegacion {
+        width: 90%;
+    }
+}
