@@ -6,51 +6,60 @@ body {
     padding: 0;
 }
 
+/* Contenedor principal */
 .container {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 30px;
+    justify-content: center; 
+    align-items: flex-start; 
+    gap: 30px; 
     margin-top: 20px;
     padding: 20px;
-    flex-direction: row;
+    flex-direction: row; 
 }
 
+/* Estilo del mapa */
 .mapadiv {
-    width: 50%;
-    max-width: 500px;
-    flex-shrink: 0;
-    background-color: #ffffff; /* Fondo blanco */
+    width: 50%; 
+    max-width: 500px; 
+    flex-shrink: 0; 
+    background-color: #ffffff;
+    order: 1 /* Fondo blanco */
 }
 
+/* Contenedor de los botones */
 #botones-departamentos {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: column; /* Botones en columna */
+    gap: 12px; /* Espacio entre botones */
     padding: 20px;
     background: #f8f4f2;
     border-radius: 12px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
-    max-width: 250px;
-    flex-shrink: 0;
+    max-width: 250px; /* Ancho máximo de los botones */
+    flex-shrink: 0; /* Evita que los botones se encojan */
 }
 
 /* Estilo base para los botones */
 .departamento-btn {
+    width: 100%; /* Ancho completo */
+    padding: 12px 15px;
+    border: none;
     background-color: #e6dad3;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: left;
+    font-weight: bold;
+
+    order: 2;
 }
 
-/* Estilo cuando un botón está resaltado */
+
 .departamento-btn.highlight {
-    background-color: #afa7ae; /* Amarillo */
+    background-color: #afa7ae; 
 }
 
-
-/* Estilo cuando un path está resaltado */
-.mapadiv path.highlight {
-    fill: #800000 !important;
-}
 
 .departamento-btn:hover {
     transform: scale(1.05);
@@ -69,14 +78,15 @@ body {
     background-color: green;
 }
 
-/* Estilos para resaltar el mapa */
+/* Estilo base para los paths del mapa */
 .mapadiv path {
-    fill: #f7f7f7;
+    fill: #f7f7f7; 
     stroke: #5d358b;
     stroke-width: 5px;
     transition: fill 0.3s ease;
 }
 
+/* Estilo cuando un path está resaltado */
 .mapadiv path.highlight {
     fill: #800000 !important;
 }
